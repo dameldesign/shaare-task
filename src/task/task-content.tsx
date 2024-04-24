@@ -153,6 +153,36 @@ const Ironing = () => {
   );
 };
 
-export { Cleaning, Ironing };
+const WardrobeOrganization = () => {
+    return (
+        <div className="flex flex-col gap-4 h-full items-start text-primaryStrong overflow-y-scroll w-full">
+        <h1 className="text-sm font-[300]">
+          Our pricing covers 1 load of items to be ironed. This typically takes up
+          to 2 hours of work per load.
+        </h1>
+        <div className="flex flex-row gap-2.5 item-start justify-center">
+          <span className="h-1 w-1 rounded-full mt-2 ml-3 bg-primaryStrong"></span>
+          <div className="flex flex-col items-start justify-center gap-1">
+            <h1 className="text-sm font-[300]">1 load:</h1>
+            <p className="text-sm font-[300]">
+              15 pieces of regular-sized items.
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-row gap-2.5 item-start justify-center">
+          <span className="h-1 w-1 rounded-full mt-2 ml-3 bg-primaryStrong"></span>
+          <div className="flex flex-col items-start w-[95%] justify-center ">
+            <h1 className="text-sm font-[300]">We are flexible. </h1>
+            <p className="text-sm font-[300]">
+              Items significantly under or over 1 load will be priced accordingly.
+              Kindly contact us for support
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+   };
+
+export { Cleaning, Ironing, WardrobeOrganization };
 
 
