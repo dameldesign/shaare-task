@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Satoshi', "Syne", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: #024751;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  font-family: 'Satoshi', "Syne", sans-serif;
+
+}
+
+
+body {
+  margin: 0;
+  overscroll-behavior: none;
+}
+
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 3px;
+  border-radius: 50px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #F0F5F4;
+  border-radius: 50px;
+  height: 2px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #024751;
+  border-radius: 50px;
+  height: 3px;
+}
