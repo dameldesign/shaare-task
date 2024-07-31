@@ -18,7 +18,6 @@ function App() {
           <img src="../src/assets/menu-01.svg" alt="" />
         </nav>
 
-
         <div className="flex flex-row gap-1 w-full justify-between items-center mt-3 p-[5%]">
           {/* Render 10 span elements with conditional styling */}
           {Array.from({ length: 10 }).map((_, index) => (
@@ -32,15 +31,17 @@ function App() {
         </div>
 
         <div className="flex flex-col gap-4 items-start justify-center w-full px-[5%] py-3 mx-auto">
-        <h1 className="font-syne font-semibold text-[20px] leading-[30px] text-primary">What service would you like to book?</h1>
-        <p className="font-normal text-xs text-primary ">You can select one type of cleaning and extra tasks</p>
-
+          <h1 className="font-syne font-semibold text-[20px] leading-[30px] text-primary">
+            What service would you like to book?
+          </h1>
+          <p className="font-normal text-xs text-primary ">
+            You can select one type of cleaning and extra tasks
+          </p>
         </div>
 
         {/* form  */}
 
-<Task />
-
+        <Task />
       </section>
     </>
   );

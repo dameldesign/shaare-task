@@ -1,17 +1,14 @@
 import React, { useState, ReactNode } from "react";
 import Unchecked from "@/assets/icons/UnChecked";
 import Checked from "@/assets/icons/Checked";
-// Import the Cleaning component as a default component
 import { Cleaning } from "@/task/task-content";
 
-// Modify the interface to include a detailsComponent prop
 interface CleaningOptionProps {
  label: string;
  name: string;
  checked: boolean;
  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
  disabled?: boolean;
- // Add a prop for the details component
  detailsComponent?: ReactNode; // This can be any React component
 }
 
@@ -31,7 +28,9 @@ const CleaningOption: React.FC<CleaningOptionProps> = ({
 
  const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     onChange(event);
-    toggleDetails();
+    if (event.target.checked) {
+      setShowDetails(true); // Ensure details are shown when the checkbox is checked
+    }
  };
 
  return (

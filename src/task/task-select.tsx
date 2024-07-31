@@ -19,7 +19,7 @@ const schema = z.object({
       z.literal("laundry"),
       z.literal("wardrobe-organization"),
     ])
-  ),
+ ),
 });
 
 // Infer the type of the form data from the schema
@@ -115,53 +115,51 @@ const Task = () => {
         />
 
         {/* Render checkboxes for extra tasks */}
-        <Controller
-          name="extraTasks"
-          control={control}
-          defaultValue={[]}
-          render={({ field }) => (
-            <>
-              <CleaningOption
-                label="Ironing"
-                name="ironing"
-                checked={field.value.includes("ironing")}
-                onChange={(e) => {
-                  const newValue = e.target.checked
-                    ? [...field.value, "ironing"]
-                    : field.value.filter((task) => task !== "ironing");
-                  field.onChange(newValue);
-                }}
-                detailsComponent={<Ironing />} // Pass the Ironing component here
-              />
-              <CleaningOption
-                label="Laundry"
-                name="laundry"
-                checked={field.value.includes("laundry")}
-                onChange={(e) => {
-                  const newValue = e.target.checked
-                    ? [...field.value, "laundry"]
-                    : field.value.filter((task) => task !== "laundry");
-                  field.onChange(newValue);
-                }}
-                detailsComponent={<Ironing />}
-              />
-              <CleaningOption
-                label="Wardrobe Organization"
-                name="wardrobe-organization"
-                checked={field.value.includes("wardrobe-organization")}
-                onChange={(e) => {
-                  const newValue = e.target.checked
-                    ? [...field.value, "wardrobe-organization"]
-                    : field.value.filter(
-                        (task) => task !== "wardrobe-organization"
-                      );
-                  field.onChange(newValue);
-                }}
-                detailsComponent={<WardrobeOrganization />} // Pass the WardrobeOrganization component here
-              />
-            </>
-          )}
-        />
+<Controller
+ name="extraTasks"
+ control={control}
+ defaultValue={[]}
+ render={({ field }) => (
+    <>
+      <CleaningOption
+        label="Ironing"
+        name="ironing"
+        checked={field.value.includes("ironing")}
+        onChange={(e) => {
+          const newValue = e.target.checked
+            ? [...field.value, "ironing"]
+            : field.value.filter((task) => task !== "ironing");
+          field.onChange(newValue);
+        }}
+        detailsComponent={<Ironing />} // Pass the Ironing component here
+      />
+      <CleaningOption
+        label="Laundry"
+        name="laundry"
+        checked={field.value.includes("laundry")}
+        onChange={(e) => {
+          const newValue = e.target.checked
+            ? [...field.value, "laundry"]
+            : field.value.filter((task) => task !== "laundry");
+          field.onChange(newValue);
+        }}
+        detailsComponent={<Ironing />}
+      />
+      <CleaningOption
+        label="Wardrobe Organization"
+        name="wardrobe-organization"
+        checked={field.value.includes("wardrobe-organization")}
+        onChange={(e) => {
+          const newValue = e.target.checked
+            ? [...field.value, "wardrobe-organization"]
+            : field.value.filter((task) => task !== "wardrobe-organization");
+          field.onChange(newValue);
+        }}
+        detailsComponent={<WardrobeOrganization />} // Pass the WardrobeOrganization component here
+      />
+    </>
+ )}
+/>
 
         <button
           type="submit"
